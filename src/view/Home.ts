@@ -1,14 +1,24 @@
-import { DomNode, el, msg } from "skydapp-browser";
-import { View, ViewParams } from "skydapp-common";
+import { DomNode, el } from "skydapp-browser";
+import { SkyUtil, View, ViewParams } from "skydapp-common";
 import { createChart } from 'lightweight-charts';
 import Layout from "./Layout";
+import axios from "axios";
+import OrderItem from "../component/order-item";
+import SymbolItem from "../component/symbol-item";
+import CommonUtil from "../CommonUtil";
 
 
 export default class Home implements View {
 
     private container: DomNode;
 
+    private tokenPrice: DomNode;
+    private asksDisplay: DomNode;
+    private orderList: DomNode;
+
     private chart: DomNode;
+
+    private interval: any;
 
     constructor() {
         Layout.current.title = "HOME";
@@ -23,7 +33,7 @@ export default class Home implements View {
                     el("hr"),
                     el("article",
                         el(".price-container",
-                            el(".price", "52,750,000"),
+                            this.tokenPrice = el(".price", "52,750,000"),
                             el(".krw", "KRW"),
                         ),
                         el(".previous-container",
@@ -32,9 +42,9 @@ export default class Home implements View {
                             el(".krw", "-716,000"),
                         ),
                         el(".toolbar-container",
-                            el(".time", "1시간"),
-                            el(".setting", "차트설정"),
-                            el(".indicator", "지표"),
+                            el("a", "1시간"),
+                            el("a", "차트설정"),
+                            el("a", "지표"),
                         ),
                         this.chart = el(""),
                     ),
@@ -53,18 +63,9 @@ export default class Home implements View {
                             el(".order-title",
                                 el("", "가격"),
                                 el("", "수량"),
-                                el("", "총"),
+                                el("", "누적 수량"),
                             ),
-                            el(".order-container sell",
-                                el(".price", "50,330,000"),
-                                el(".amount", "0.0037"),
-                                el(".total", "20.5578"),
-                            ),
-                            el(".order-container buy",
-                                el(".price", "50,330,000"),
-                                el(".amount", "0.0037"),
-                                el(".total", "20.5578"),
-                            ),
+                            this.orderList = el(".order-list"),
                         ),
                     ),
                     el("article.right",
@@ -131,30 +132,45 @@ export default class Home implements View {
                 ),
                 el("hr"),
                 el("article",
-                    el(".item",
-                        el(".title",
-                            el("p", "비트코인"),
-                            el(".sub", "BTC/KRW"),
-                        ),
-                        el(".price", "50,130,000"),
-                        el(".previous",
-                            el(".percent", "+0.17%"),
-                            el(".price", "8,000"),
-                        ),
-                        el(".deal",
-                            el("p", "300,896"),
-                            el("span", "백만"),
-                        ),
-                    ),
+                    new SymbolItem("비트코인", "BTC/KRW", 50330000, "+0.17", 8000, 300896)
                 ),
             ),
         ));
         this.init();
+        this.interval = setInterval(() => this.loadInterval(), 1000);
+    }
+
+    private async loadInterval() {
+        this.getPrice();
+    }
+
+    private async getPrice() {
+        const data = await axios.get("https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT");
+
+        this.tokenPrice.empty();
+        this.tokenPrice.appendText(`${CommonUtil.numberWithCommas(data.data.price)}`);
+    }
+
+    private async getOrderBook() {
+        const data = await axios.get("https://api.binance.com/api/v3/depth?limit=10&symbol=BTCUSDT");
+
+        this.orderList.empty();
+
+        SkyUtil.repeat(data.data.asks.length, (i: number) => {
+            this.orderList.append(new OrderItem(data.data.asks[i][0], data.data.asks[i][1], 1));
+        });
+    }
+
+    private async getCandle() {
+        const data = await axios.get("https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h");
     }
 
     private init() {
+        this.getPrice();
+        this.getOrderBook();
+        this.getCandle();
         const chart = createChart(this.chart.domElement, {
-            width: 990, height: 413
+            width: 350, height: 413
         });
         const lineSeries = chart.addCandlestickSeries();
         lineSeries.setData([
@@ -313,6 +329,7 @@ export default class Home implements View {
     public changeParams(params: ViewParams, uri: string): void { }
 
     public close(): void {
+        clearInterval(this.interval);
         this.container.delete();
     }
 }

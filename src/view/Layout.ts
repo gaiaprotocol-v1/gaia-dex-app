@@ -26,6 +26,15 @@ export default class Layout implements View {
                         new PCMenu(),
                         el(".right",
                             new UserInfo(),
+                            select = el("select.language-select",
+                                el("option", "KR", { value: "ko" }),
+                                el("option", "EN", { value: "en" }),
+                                {
+                                    change: () => {
+                                        BrowserInfo.changeLanguage(select.domElement.value);
+                                    },
+                                },
+                            ),
                             el("a.menu-button", el("img", { src: "/images/shared/icn/menu.svg", alt: "menu" }), {
                                 click: (event, button) => {
                                     const rect = button.rect;
