@@ -187,294 +187,207 @@ body {
   max-width: 600px;
   width: 90%;
   margin: auto;
-  border-radius: 4px;
   background-color: black;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.dialogue.alert > h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  padding: 16px;
+  border-radius: 2px;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .dialogue.alert > p {
-  padding: 0px 16px 8px 16px;
-  font-size: 0.875rem;
-  line-height: 1.2em;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
 }
 .dialogue.alert > .button-container {
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  padding: 16px;
+  justify-content: space-between;
 }
 .dialogue.alert > .button-container > button {
-  background-color: transparent;
-  color: white;
-  padding: 8px 16px;
-  font-size: 0.75rem;
-  border-radius: 4px;
+  width: 100%;
+  background-color: #b19c76;
+  padding: 12px;
 }
 .dialogue.alert > .button-container > button:hover {
-  background-color: rgba(177, 156, 118, 0.8);
+  background-color: rgba(177, 156, 118, 0.9);
 }
 .dialogue.alert > .button-container > button:active {
-  background-color: #b19c76;
+  background-color: rgba(177, 156, 118, 0.8);
 }
 .dialogue.confirm {
   position: relative;
   max-width: 600px;
   width: 90%;
   margin: auto;
-  border-radius: 4px;
   background-color: black;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.dialogue.confirm > h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  padding: 16px;
+.dialogue.confirm > .title-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px 0px 16px;
+}
+.dialogue.confirm > .title-container > h6 {
+  font-size: 21px;
+}
+.dialogue.confirm > .title-container > a > img {
+  height: 20px;
 }
 .dialogue.confirm > p {
-  padding: 0px 16px 8px 16px;
-  font-size: 0.875rem;
-  line-height: 1.2em;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
 }
 .dialogue.confirm > .button-container {
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  padding: 16px;
+  justify-content: space-between;
 }
 .dialogue.confirm > .button-container > button {
-  background-color: transparent;
-  color: white;
-  padding: 8px 16px;
-  font-size: 0.75rem;
-  border-radius: 4px;
+  width: 100%;
+  background-color: #b19c76;
+  padding: 12px;
 }
 .dialogue.confirm > .button-container > button:hover {
-  background-color: rgba(177, 156, 118, 0.8);
+  background-color: rgba(177, 156, 118, 0.9);
 }
 .dialogue.confirm > .button-container > button:active {
-  background-color: #b19c76;
+  background-color: rgba(177, 156, 118, 0.8);
+}
+.dialogue.confirm > .button-container > .cancel {
+  background-color: #000;
+  color: #b19c76;
+  border: 1px solid #b19c76;
+}
+.dialogue.confirm > .button-container > .cancel:hover {
+  border: 1px solid rgba(177, 156, 118, 0.9);
+  color: #000;
+}
+.dialogue.confirm > .button-container > .cancel:active {
+  background-color: rgba(177, 156, 118, 0.8);
+  border: 1px solid rgba(177, 156, 118, 0.8);
+  color: #000;
 }
 .dialogue.prompt {
   position: relative;
   max-width: 600px;
   width: 90%;
   margin: auto;
-  border-radius: 4px;
   background-color: black;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 16px;
-}
-.dialogue.prompt > h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  padding: 8px 0px;
-}
-.dialogue.prompt > p {
-  padding: 8px 0px;
-  font-size: 0.875rem;
-  line-height: 1.2em;
-}
-.dialogue.prompt > .input-container {
-  margin-top: 8px;
-  padding: 16px 0px;
-}
-.dialogue.prompt > .input-container > input {
-  width: 100%;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 8px;
-  height: 36px;
-  border: 1px solid #e4e8eb;
-  background-color: transparent;
-  color: white;
-}
-.dialogue.prompt > .input-container > input:hover {
-  border: 1px solid #e4e8eb;
-}
-.dialogue.prompt > .input-container > input:focus {
-  border: 1px solid #e4e8eb;
-}
-.dialogue.prompt > .button-container {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 16px;
-}
-.dialogue.prompt > .button-container > button {
-  background-color: transparent;
-  color: white;
-  padding: 8px 16px;
-  font-size: 0.75rem;
-  border-radius: 4px;
-}
-.dialogue.prompt > .button-container > button:hover {
-  background-color: rgba(177, 156, 118, 0.8);
-}
-.dialogue.prompt > .button-container > button:active {
-  background-color: #b19c76;
-}
-.connect-wallet-popup {
-  position: relative;
-  max-width: 420px;
-  width: 90%;
-  margin: auto;
-  border-radius: 4px;
-  background-color: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.connect-wallet-popup > h2 {
-  font-size: 24px;
-  padding: 16px;
-}
-.connect-wallet-popup > p {
-  padding: 16px;
-  border-top: 1px solid #CCC;
-  color: #CCC;
-}
-.connect-wallet-popup > .button-container {
-  padding: 16px;
-}
-.connect-wallet-popup > .button-container > a {
-  margin-top: 10px;
+  border-radius: 2px;
+  color: #FFF;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  background-color: transparent;
-  color: white;
-  padding: 8px 16px;
-  font-size: 14px;
-  border-radius: 4px;
-  text-decoration: none;
-}
-.connect-wallet-popup > .button-container > a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  color: white;
-}
-.connect-wallet-popup > .button-container > a > img {
-  margin-right: 10px;
-}
-.connect-wallet-popup > .button-container > .connect-kaikas-button {
-  background-color: #6f6558;
-  color: #ffffff;
-}
-.connect-wallet-popup > .button-container > .connect-klip-button {
-  background-color: #fee500;
-  color: #000000;
-}
-.connect-wallet-popup > .button-container > .cancel-button {
-  border: 1px solid #ffffff;
-}
-.klip-qr-popup {
-  position: relative;
-  max-width: 600px;
-  width: 90%;
-  margin: auto;
-  border-radius: 4px;
-  background-color: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.klip-qr-popup > h2 {
-  font-size: 24px;
-  padding: 16px;
-}
-.klip-qr-popup > .qr {
-  border-top: 1px solid #CCC;
-  border-bottom: 1px solid #CCC;
-  padding: 16px 0;
-  text-align: center;
-}
-.klip-qr-popup > p {
-  margin-top: 16px;
-  padding: 0 16px;
-  color: white;
-}
-.klip-qr-popup > .button-container {
-  display: flex;
-  justify-content: flex-end;
-  padding: 16px;
-}
-.klip-qr-popup > .button-container > button {
-  background-color: transparent;
-  color: white;
-  padding: 8px 16px;
-  font-size: 14px;
-  border-radius: 4px;
-}
-.klip-qr-popup > .button-container > button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-.popup-background {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 99999;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
   flex-direction: column;
-  overflow-y: scroll;
-  padding: 20px 0;
+}
+.dialogue.prompt > .title-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px 0px 16px;
+}
+.dialogue.prompt > .title-container > h6 {
+  font-size: 21px;
+}
+.dialogue.prompt > .title-container > a > img {
+  height: 20px;
+}
+.dialogue.prompt > p {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+}
+.dialogue.prompt > .input-container {
+  padding: 0px 16px 16px 16px;
+  width: 100%;
+}
+.dialogue.prompt > .input-container > input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #b19c76;
+  color: white;
+  background: black;
+}
+.dialogue.prompt > .button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.dialogue.prompt > .button-container > button {
+  width: 100%;
+  background-color: #b19c76;
+  padding: 12px;
+}
+.dialogue.prompt > .button-container > button:hover {
+  background-color: rgba(177, 156, 118, 0.9);
+}
+.dialogue.prompt > .button-container > button:active {
+  background-color: rgba(177, 156, 118, 0.8);
+}
+.dialogue.prompt > .button-container > .cancel {
+  background-color: #000;
+  color: #b19c76;
+  border: 1px solid #b19c76;
+}
+.dialogue.prompt > .button-container > .cancel:hover {
+  border: 1px solid rgba(177, 156, 118, 0.9);
+  color: #000;
+}
+.dialogue.prompt > .button-container > .cancel:active {
+  background-color: rgba(177, 156, 118, 0.8);
+  border: 1px solid rgba(177, 156, 118, 0.8);
+  color: #000;
+}
+.user-menu {
+  display: flex;
+  justify-content: center;
+  min-height: 28px;
+}
+@media only screen and (max-width: 719px) {
+  .user-menu {
+    display: none;
+    width: 100%;
+    min-height: 34px;
+    align-items: center;
+    padding: 16px 20px;
+  }
+  .user-menu:hover {
+    background-color: rgba(177, 156, 118, 0.9);
+  }
+  .user-menu:active {
+    background-color: #b19c76;
+  }
 }
 .user-menu > .connect-wallet,
 .user-menu .wallet-address {
   display: block;
-  width: 100%;
   text-align: center;
-  font-size: 12px;
-  font-weight: 400;
-  padding: 8px 16px;
+  min-width: 100px;
   color: #b19c76;
+  padding: 8px 12px;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: black;
   border: 1px solid #b19c76;
   border-radius: 2px;
 }
 .user-menu > .connect-wallet:hover,
 .user-menu .wallet-address:hover {
   background-color: rgba(177, 156, 118, 0.2);
-}
-.user-menu > .wallet-address {
-  position: relative;
-  cursor: pointer;
-}
-.user-menu > .wallet-address > ul {
-  position: absolute;
-  left: 0;
-  top: 30px;
-  width: 100px;
-  display: none;
-  padding: 10px 0;
-}
-.user-menu > .wallet-address > ul > li > a {
-  display: block;
-  text-align: center;
-  padding: 10px;
-  color: #fff;
-}
-.user-menu > .wallet-address > ul > li > a:hover {
-  color: #b19c76;
-}
-.user-menu > .wallet-address > ul > li > a:active {
-  color: #b19c76;
-}
-.user-menu > .wallet-address:hover > ul {
-  display: block;
-}
-.user-menu > ul {
-  margin-top: 10px;
-  margin-left: 10px;
-}
-.user-menu > ul > li > a {
-  display: block;
-  padding: 8px 5px;
-  color: #ccc;
-}
-.user-menu > ul > li > a:hover {
-  color: #b19c76;
-}
-.user-menu > ul > li > a:active {
-  color: #b19c76;
 }
 .pc-menu > ul {
   display: flex;
@@ -559,6 +472,151 @@ body {
 .mobile-menu > .user-menu {
   margin: auto;
   margin-top: 16px;
+}
+.connect-wallet-popup {
+  position: relative;
+  max-width: 420px;
+  width: 90%;
+  margin: auto;
+  border-radius: 2px;
+  background-color: #000000;
+  color: #FFF;
+}
+.connect-wallet-popup > .title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+.connect-wallet-popup > .title-container > h6 {
+  font-size: 21px;
+}
+.connect-wallet-popup > .title-container > a > img {
+  height: 20px;
+}
+.connect-wallet-popup > p {
+  border-top: 1px solid #CCC;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFF;
+  font-weight: 300;
+}
+.connect-wallet-popup > .button-container {
+  padding: 0px 16px 16px 16px;
+}
+.connect-wallet-popup > .button-container > a {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 300;
+}
+.connect-wallet-popup > .button-container > a:hover {
+  background-color: rgba(177, 156, 118, 0.5);
+  color: white;
+}
+.connect-wallet-popup > .button-container > a > img {
+  margin-right: 10px;
+}
+.connect-wallet-popup > .button-container > .connect-kaikas-button {
+  background-color: #6f6558;
+}
+.connect-wallet-popup > .button-container > .connect-klip-button {
+  background-color: #fee500;
+  color: #000000;
+}
+.connect-wallet-popup > .button-container > .cancel-button {
+  border: 1px solid #ffffff;
+}
+.klip-qr-popup {
+  position: relative;
+  max-width: 420px;
+  width: 90%;
+  margin: auto;
+  border-radius: 2px;
+  background-color: #000000;
+  color: #FFF;
+  text-align: center;
+}
+.klip-qr-popup > .title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #CCC;
+}
+.klip-qr-popup > .title-container > h6 {
+  font-size: 21px;
+}
+.klip-qr-popup > .title-container > a > img {
+  height: 20px;
+}
+.klip-qr-popup > .qr {
+  padding-top: 16px;
+}
+.klip-qr-popup > p {
+  padding: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFF;
+  font-weight: 300;
+}
+.popup-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 20px 0;
+}
+.select {
+  display: inline-block;
+  z-index: 999;
+}
+.select > .selected {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 12px;
+}
+.select > .selected > .selected-value {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.select > .selected > .arrow {
+  width: 16px;
+  height: 16px;
+  background: url("/images/shared/icn/expand.svg") no-repeat;
+  background-size: 100%;
+}
+.select > ul {
+  display: none;
+  list-style-type: none;
+  padding-left: 0px;
+  position: absolute;
+  background: #FFF;
+  border-top: none;
+  margin: 1px 0 0 -1px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.select > ul > li {
+  padding: 8px 12px;
+}
+.select > ul > li:hover {
+  background: rgba(177, 156, 118, 0.7);
 }
 .order-item {
   display: flex;
@@ -784,10 +842,10 @@ body {
   color: #CCCCCC;
 }
 .layout > footer .footer-container > .link-tree > .stableDAO:hover {
-  color: #b19c76;
+  color: #00445a;
 }
 .layout > footer .footer-container > .copyright {
-  font-size: 0.75rem;
+  font-size: 12px;
   margin-bottom: 32px;
 }
 .home-view {
@@ -863,10 +921,10 @@ body {
 }
 .home-view > section > article > article > .toolbar-container {
   display: flex;
+  align-items: center;
   background-color: #f7f7f7;
   padding: 8px 16px;
   font-size: 14px;
-  gap: 20px;
 }
 .home-view > section > .order-container {
   display: flex;
@@ -1017,6 +1075,8 @@ body {
   }
 }
 .home-view > aside > .input-container {
+  display: flex;
+  align-items: center;
   width: 100%;
 }
 .home-view > aside > .input-container > input {
@@ -1024,6 +1084,11 @@ body {
   padding: 8px;
   padding-left: 14px;
   margin: 8px 0px;
+}
+.home-view > aside > .input-container > img {
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
 }
 .home-view > aside > hr {
   border: 0;

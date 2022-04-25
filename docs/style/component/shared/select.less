@@ -1,0 +1,43 @@
+.select {
+    display: inline-block;
+    z-index: 999;
+
+    >.selected {
+        display        : flex;
+        justify-content: space-between;
+        padding        : 0px 12px;
+
+        >.selected-value {
+            white-space  : nowrap;
+            overflow     : hidden;
+            text-overflow: ellipsis;
+        }
+
+        >.arrow {
+            width          : 16px;
+            height         : 16px;
+            background     : url("/images/shared/icn/expand.svg") no-repeat;
+            background-size: 100%;
+        }
+    }
+
+    >ul {
+        display        : none;
+        list-style-type: none;
+        padding-left   : 0px;
+        position       : absolute;
+        background     : #FFF;
+        border-top     : none;
+        margin         : 1px 0 0 -1px;
+        cursor         : pointer;
+        box-shadow     : 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+        >li {
+            padding: 8px 12px;
+
+            &:hover {
+                background: rgba(177, 156, 118, 0.7);
+            }
+        }
+    }
+}

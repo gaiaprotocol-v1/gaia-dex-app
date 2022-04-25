@@ -9,16 +9,23 @@ export default class ConnectWalletPopup extends Popup {
         super(".popup-background");
         this.append(
             this.content = el(".connect-wallet-popup",
-                el("h2", msg("CONNECT_WALLET_TITLE")),
+                el(".title-container",
+                    el("h6", msg("CONNECT_WALLET_TITLE")),
+                    el("a", {
+                        click: () => {
+                            this.delete()
+                        }
+                    }, el("img", { src: "/images/shared/icn/close.svg", alt: "close" })),
+                ),
                 el("p", msg("CONNECT_WALLET_DESC")),
                 el(".button-container",
                     el("a.connect-kaikas-button",
-                        el("img", { src: "/images/shared/icn/icn-kaikas.svg" }),
+                        el("img", { src: "/images/shared/icn/kaikas.svg" }),
                         msg("CONNECT_WALLET_BUTTON1"),
                         { href: "https://chrome.google.com/webstore/detail/kaikas/jblndlipeogpafnldhgmapagcccfchpi", target: "_blank" },
                     ),
                     el("a.connect-klip-button",
-                        el("img", { src: "/images/shared/icn/icn-klip.svg" }),
+                        el("img", { src: "/images/shared/icn/klip.svg" }),
                         msg("CONNECT_WALLET_BUTTON2"),
                         {
                             click: async () => {

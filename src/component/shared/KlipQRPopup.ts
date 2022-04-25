@@ -8,16 +8,18 @@ export default class KlipQRPopup extends Popup {
         super(".popup-background");
         this.append(
             this.content = el(".klip-qr-popup",
-                el("h2", msg("KLIP_POPUP_TITLE")),
+                el(".title-container",
+                    el("h6", msg("KLIP_POPUP_TITLE")),
+                    el("a", {
+                        click: () => {
+                            this.delete()
+                        }
+                    }, el("img", { src: "/images/shared/icn/close.svg", alt: "close" })),
+                ),
                 el(".qr", el("img", { src: dataURL })),
                 el("p", msg("KLIP_POPUP_DESC1")),
                 el("p", msg("KLIP_POPUP_DESC2")),
                 el("p", msg("KLIP_POPUP_DESC3")),
-                el(".button-container",
-                    el("button", msg("CONFIRM_BUTTON"), {
-                        click: () => this.delete(),
-                    }),
-                ),
             ),
         );
     }

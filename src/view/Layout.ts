@@ -20,7 +20,7 @@ export default class Layout implements View {
                     el(".nav",
                         el(".logo",
                             el("a", { href: "/" },
-                                el("img", { src: "/images/shared/logo/gaia-dex.svg", alt: "gaia stable dao logo" })
+                                el("img", { src: "/images/shared/logo/gaia-dex.svg", alt: "gaia dex logo" })
                             ),
                         ),
                         new PCMenu(),

@@ -6,6 +6,7 @@ import axios from "axios";
 import OrderItem from "../component/order-item";
 import SymbolItem from "../component/symbol-item";
 import CommonUtil from "../CommonUtil";
+import Select from "../component/shared/Select";
 
 
 export default class Home implements View {
@@ -13,7 +14,6 @@ export default class Home implements View {
     private container: DomNode;
 
     private tokenPrice: DomNode;
-    private asksDisplay: DomNode;
     private orderList: DomNode;
 
     private chart: DomNode;
@@ -42,9 +42,9 @@ export default class Home implements View {
                             el(".krw", "-716,000"),
                         ),
                         el(".toolbar-container",
-                            el("a", "1시간"),
-                            el("a", "차트설정"),
-                            el("a", "지표"),
+                            new Select("1시간", ["1분", "5분"]),
+                            new Select("차트설정", ["테스트 차트"]),
+                            new Select("지표", ["테스트 지표"]),
                         ),
                         this.chart = el(""),
                     ),
@@ -114,7 +114,10 @@ export default class Home implements View {
                                     el("input.number-input", { placeholder: "0", type: "number" }),
                                 ),
                             ),
-                            el("a", "매수"),
+                            el("a", "매수", {
+                                click: () => {
+                                }
+                            }),
                         ),
                     ),
                 ),
@@ -122,6 +125,7 @@ export default class Home implements View {
             el("aside",
                 el(".input-container",
                     el("input", { placeholder: "코인명/심볼검색" }),
+                    el("img", { src: "/images/shared/icn/search.svg", alt: "search" })
                 ),
                 el("hr"),
                 el("header",
@@ -170,7 +174,7 @@ export default class Home implements View {
         this.getOrderBook();
         this.getCandle();
         const chart = createChart(this.chart.domElement, {
-            width: 350, height: 413
+            width: 920, height: 413
         });
         const lineSeries = chart.addCandlestickSeries();
         lineSeries.setData([

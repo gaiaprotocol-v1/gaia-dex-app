@@ -3,25 +3,42 @@
     max-width       : 420px;
     width           : 90%;
     margin          : auto;
-    border-radius   : 4px;
-    background-color: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius   : 2px;
+    background-color: #000000;
+    color           : #FFF;
 
-    >h2 {
-        font-size: 24px;
-        padding  : 16px;
+
+    >.title-container {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        padding        : 16px;
+
+        >h6 {
+            font-size: 21px;
+        }
+
+        >a {
+            >img {
+                height: 20px;
+            }
+        }
     }
 
     >p {
-        padding   : 16px;
-        border-top: 1px solid #CCC;
-        color     : #CCC;
+        border-top : 1px solid #CCC;
+        padding    : 16px;
+        font-size  : 14px;
+        line-height: 20px;
+        color      : #FFF;
+        font-weight: 300;
     }
 
     >.button-container {
-        padding: 16px;
+        padding: 0px 16px 16px 16px;
 
         >a {
-            margin-top      : 10px;
+            margin-top      : 12px;
             display         : flex;
             justify-content : center;
             align-items     : center;
@@ -29,13 +46,12 @@
             background-color: transparent;
             color           : white;
             padding         : 8px 16px;
-            font-size       : 14px;
-            border-radius   : 4px;
+            border-radius   : 2px;
             text-decoration : none;
+            font-weight     : 300;
 
             &:hover {
-                background-color: rgba(255, 255, 255, 0.5);
-                box-shadow      : 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                background-color: rgba(177, 156, 118, 0.5);
                 color           : white;
             }
 
@@ -46,7 +62,6 @@
 
         >.connect-kaikas-button {
             background-color: rgb(111, 101, 88);
-            color           : #ffffff;
         }
 
         >.connect-klip-button {
