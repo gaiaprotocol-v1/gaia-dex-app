@@ -10,3 +10,5 @@ CONNECT_WALLET_BUTTON1,카이카스 연결,Connect Kaikas
 CONNECT_WALLET_BUTTON2,카카오톡 클립으로 연결,Connect with Kakao Talk Klip
 CONNECT_WALLET_BUTTON3,연결하지 않고 둘러보기,Explore without Wallet Connection
 CANCEL_BUTTON,취소,Cancel
+EXCHANGE_MENU,거래소,Exchage
+INVESTMENT_MENU,투자 내역,Inestment

@@ -1,4 +1,12 @@
 {
     "menu": [
+        {
+            "uri": "",
+            "key": "EXCHANGE_MENU"
+        },
+        {
+            "uri": "",
+            "key": "INVESTMENT_MENU"
+        }
     ]
 }

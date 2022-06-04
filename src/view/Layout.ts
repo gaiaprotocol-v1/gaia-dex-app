@@ -22,8 +22,8 @@ export default class Layout implements View {
                             el("a", { href: "/" },
                                 el("img", { src: "/images/shared/logo/gaia-dex.svg", alt: "gaia dex logo" })
                             ),
+                            new PCMenu(),
                         ),
-                        new PCMenu(),
                         el(".right",
                             new UserInfo(),
                             select = el("select.language-select",
