@@ -399,17 +399,15 @@ body {
 }
 .pc-menu > ul > li > a {
   cursor: pointer;
-  padding: 8px 12px 8px 12px;
+  padding: 8px 24px;
   text-decoration: none;
   color: #666;
 }
 .pc-menu > ul > li > a:hover {
-  background-color: rgba(177, 156, 118, 0.5);
   border-radius: 4px;
   color: white;
 }
 .pc-menu > ul > li > a:active {
-  background-color: rgba(177, 156, 118, 0.7);
   border-radius: 4px;
   color: white;
 }
@@ -1493,6 +1491,147 @@ body {
 .history-view > section > article > .tab-container > .active {
   font-weight: bold;
   border-bottom: 3px solid #B19C76;
+}
+.history-view > section > article > .my-container {
+  display: flex;
+  width: 100%;
+}
+.history-view > section > article > .my-container > .history-table {
+  width: 100%;
+}
+.history-view > section > article > .my-container > .history-table > .filter-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 32px;
+}
+.history-view > section > article > .my-container > .history-table > .filter-container > .date-container,
+.history-view > section > article > .my-container > .history-table > .filter-container .category-container,
+.history-view > section > article > .my-container > .history-table > .filter-container .search-container {
+  width: 100%;
+}
+.history-view > section > article > .my-container > .history-table > .filter-container > .date-container > .title,
+.history-view > section > article > .my-container > .history-table > .filter-container .category-container > .title,
+.history-view > section > article > .my-container > .history-table > .filter-container .search-container > .title {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #666;
+}
+.history-view > section > article > .my-container > .history-table > .filter-container > .date-container > ul,
+.history-view > section > article > .my-container > .history-table > .filter-container .category-container > ul,
+.history-view > section > article > .my-container > .history-table > .filter-container .search-container > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 2px;
+}
+.history-view > section > article > .my-container > .history-table > .filter-container > .date-container > ul > li,
+.history-view > section > article > .my-container > .history-table > .filter-container .category-container > ul > li,
+.history-view > section > article > .my-container > .history-table > .filter-container .search-container > ul > li {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  border: 0;
+  float: left;
+  border: 1px solid #d2d3d7;
+  border-left: 0;
+  height: 36px;
+  vertical-align: middle;
+  text-align: center;
+}
+.history-view > section > article > .my-container > .history-table > .filter-container > .date-container > ul > li > button,
+.history-view > section > article > .my-container > .history-table > .filter-container .category-container > ul > li > button,
+.history-view > section > article > .my-container > .history-table > .filter-container .search-container > ul > li > button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0 10px;
+  background: #fff;
+  font-size: 12px;
+  color: #666;
+  cursor: pointer;
+}
+.history-view > section > article > .my-container > .history-table > .filter-container > .date-container > ul > li:first-child,
+.history-view > section > article > .my-container > .history-table > .filter-container .category-container > ul > li:first-child,
+.history-view > section > article > .my-container > .history-table > .filter-container .search-container > ul > li:first-child {
+  border-left: 1px solid #d2d3d7;
+}
+.history-view > section > article > .my-container > .history-table > .filter-container > .date-container > ul > .active,
+.history-view > section > article > .my-container > .history-table > .filter-container .category-container > ul > .active,
+.history-view > section > article > .my-container > .history-table > .filter-container .search-container > ul > .active {
+  border: 1px solid #B19C76;
+}
+.history-view > section > article > .my-container > .history-table > .filter-container > .date-container > ul > .active > button,
+.history-view > section > article > .my-container > .history-table > .filter-container .category-container > ul > .active > button,
+.history-view > section > article > .my-container > .history-table > .filter-container .search-container > ul > .active > button {
+  font-weight: bold;
+  color: #B19C76;
+}
+.history-view > section > article > .my-container > .history-table > .filter-container > .date-container > input,
+.history-view > section > article > .my-container > .history-table > .filter-container .category-container > input,
+.history-view > section > article > .my-container > .history-table > .filter-container .search-container > input {
+  width: 100%;
+  padding: 0px 14px;
+  border: 1px solid #dee1e7;
+  border-radius: 4px;
+  height: 36px;
+  font-weight: bold;
+}
+.history-view > section > article > .my-container > .history-table > .filter-container > .date-container > input::placeholder,
+.history-view > section > article > .my-container > .history-table > .filter-container .category-container > input::placeholder,
+.history-view > section > article > .my-container > .history-table > .filter-container .search-container > input::placeholder {
+  font-weight: 500;
+  color: #dee1e7;
+}
+.history-view > section > article > .my-container > .history-table > table {
+  width: 100%;
+}
+.history-view > section > article > .my-container > .history-table > table > thead {
+  width: 100%;
+  vertical-align: middle;
+  height: 30px;
+  background-color: #f9fafc;
+  color: #666;
+  font-size: 11px;
+  border-bottom: 1px solid #CCC;
+}
+.history-view > section > article > .my-container > .history-table > table > thead > tr > th {
+  vertical-align: middle;
+}
+.history-view > section > article > .my-container > .history-table > table > tbody {
+  display: table-row-group;
+  vertical-align: middle;
+}
+.history-view > section > article > .my-container > .history-table > table > tbody > tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-bottom: 1px solid #eee;
+}
+.history-view > section > article > .my-container > .history-table > table > tbody > tr > .amount-name {
+  display: flex;
+}
+.history-view > section > article > .my-container > .history-table > table > tbody > tr > td {
+  vertical-align: middle;
+  height: 68px;
+  align-items: center;
+  padding: 15px 0px;
+  padding-left: 20px;
+  font-size: 13px;
+}
+.history-view > section > article > .my-container > .history-table > table > tbody > tr > td > i {
+  display: inline-block;
+  padding-left: 2px;
+  font-size: 11px;
+  color: #999;
+  font-weight: 400;
+}
+.history-view > section > article > .my-container > .history-table > table > tbody > tr > .sell {
+  color: #0062df;
+}
+.history-view > section > article > .my-container > .history-table > table > tbody > tr > .buy {
+  color: #e91840;
 }
 .history-view > section > hr {
   border: 0;
