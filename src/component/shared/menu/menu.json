@@ -5,7 +5,7 @@
             "key": "EXCHANGE_MENU"
         },
         {
-            "uri": "",
+            "uri": "investment/balance",
             "key": "INVESTMENT_MENU"
         }
     ]

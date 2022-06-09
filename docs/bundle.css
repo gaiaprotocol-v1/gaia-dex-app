@@ -1053,12 +1053,12 @@ body {
 }
 .home-view > section > .order-container > article > header > .tab > .item:active {
   font-weight: 700;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #B19C76;
   color: black;
 }
 .home-view > section > .order-container > article > header > .tab > .item:hover {
   font-weight: 700;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #B19C76;
   color: black;
 }
 .home-view > section > .order-container > article > hr {
@@ -1218,6 +1218,415 @@ body {
   margin: 0px;
 }
 .home-view > aside > header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f7f7f7;
+  font-size: 12px;
+  padding: 8px;
+}
+.balance-view {
+  display: flex;
+}
+@media only screen and (max-width: 719px) {
+  .balance-view {
+    flex-direction: column;
+  }
+}
+.balance-view > section {
+  max-width: 990px;
+  width: 100%;
+  height: 100%;
+}
+.balance-view > section > article {
+  background: white;
+  box-shadow: 2px 2px 4px #dee1e7;
+}
+.balance-view > section > article > .tab-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+.balance-view > section > article > .tab-container > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  padding: 0px 8px;
+  border-bottom: 1px solid #CCC;
+}
+.balance-view > section > article > .tab-container > a:hover {
+  font-weight: bold;
+  border-bottom: 3px solid #B19C76;
+}
+.balance-view > section > article > .tab-container > .active {
+  font-weight: bold;
+  border-bottom: 3px solid #B19C76;
+}
+.balance-view > section > article > .my-container {
+  display: flex;
+  width: 100%;
+  max-width: 920px;
+}
+.balance-view > section > article > .my-container > .amount-container {
+  max-width: 540px;
+  width: 100%;
+  padding: 25px 30px;
+}
+.balance-view > section > article > .my-container > .amount-container > .trade-amount-total > dl {
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  display: table;
+  float: left;
+  width: 236px;
+}
+.balance-view > section > article > .my-container > .amount-container > .trade-amount-total > dl > dt {
+  display: table-cell;
+}
+.balance-view > section > article > .my-container > .amount-container > .trade-amount-total > dl > dt > span {
+  font-size: 14px;
+  color: #666;
+}
+.balance-view > section > article > .my-container > .amount-container > .trade-amount-total > dl > dd > span {
+  font-size: 20px;
+}
+.balance-view > section > article > .my-container > .amount-container > .trade-amount-total > dl > dd > i {
+  display: inline-block;
+  padding-left: 7px;
+  vertical-align: bottom;
+  font-size: 11px;
+  color: #999;
+}
+.balance-view > section > article > .my-container > .amount-container > .trade-amount > dl {
+  margin-top: 12px;
+  display: table;
+  float: left;
+  width: 236px;
+}
+.balance-view > section > article > .my-container > .amount-container > .trade-amount > dl > dt {
+  display: table-cell;
+}
+.balance-view > section > article > .my-container > .amount-container > .trade-amount > dl > dt > span {
+  font-size: 14px;
+  color: #666;
+}
+.balance-view > section > article > .my-container > .amount-container > .trade-amount > dl > dd > span {
+  font-size: 20px;
+}
+.balance-view > section > article > .my-container > .amount-container > .trade-amount > dl > dd > i {
+  display: inline-block;
+  padding-left: 7px;
+  vertical-align: bottom;
+  font-size: 11px;
+  color: #999;
+}
+.balance-view > section > article > .my-container > .chart-container {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.balance-view > section > article > .my-container > .chart-container > canvas {
+  max-width: 300px;
+  max-height: 150px;
+}
+.balance-view > section > article > .amount-table > .amount-title {
+  font-weight: bold;
+  padding: 12px 20px;
+  border-top: 1px solid #dee1e7;
+  border-bottom: 1px solid #dee1e7;
+}
+.balance-view > section > article > .amount-table > table {
+  width: 100%;
+}
+.balance-view > section > article > .amount-table > table > thead {
+  width: 100%;
+  vertical-align: middle;
+  height: 30px;
+  background-color: #f9fafc;
+  color: #666;
+  font-size: 11px;
+  border-bottom: 1px solid #CCC;
+}
+.balance-view > section > article > .amount-table > table > thead > tr > th {
+  vertical-align: middle;
+}
+.balance-view > section > article > .amount-table > table > tbody {
+  display: table-row-group;
+  vertical-align: middle;
+}
+.balance-view > section > article > .amount-table > table > tbody > tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-bottom: 1px solid #eee;
+}
+.balance-view > section > article > .amount-table > table > tbody > tr > .amount-name {
+  display: flex;
+}
+.balance-view > section > article > .amount-table > table > tbody > tr > td {
+  vertical-align: middle;
+  height: 68px;
+  align-items: center;
+  padding: 15px 0px;
+  padding-left: 20px;
+}
+.balance-view > section > article > .amount-table > table > tbody > tr > td > .logo {
+  width: 26px;
+  height: 26px;
+}
+.balance-view > section > article > .amount-table > table > tbody > tr > td > .name {
+  padding-left: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.balance-view > section > article > .amount-table > table > tbody > tr > td > .name > .subName {
+  padding-top: 6px;
+  font-size: 11px;
+  color: #666;
+  font-weight: 400;
+}
+.balance-view > section > article > .amount-table > table > tbody > tr > td > .count {
+  font-size: 14px;
+  word-break: keep-all;
+  word-wrap: break-word;
+  text-align: right;
+}
+.balance-view > section > article > .amount-table > table > tbody > tr > td > .count > i {
+  display: inline-block;
+  padding-left: 2px;
+  font-size: 11px;
+  color: #999;
+  font-weight: 400;
+}
+.balance-view > section > article > .amount-table > table > tbody > tr > td > .decrease {
+  color: #0062df;
+}
+.balance-view > section > hr {
+  border: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #CCC;
+  margin: 0px;
+}
+.balance-view > aside {
+  max-width: 504px;
+  width: 100%;
+  margin-left: 16px;
+  background: white;
+  box-shadow: 2px 2px 4px #dee1e7;
+}
+@media only screen and (max-width: 719px) {
+  .balance-view > aside {
+    display: none;
+  }
+}
+.balance-view > aside > .input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.balance-view > aside > .input-container > input {
+  width: 100%;
+  padding: 8px;
+  padding-left: 14px;
+  margin: 8px 0px;
+}
+.balance-view > aside > .input-container > img {
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+}
+.balance-view > aside > hr {
+  border: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #CCC;
+  margin: 0px;
+}
+.balance-view > aside > header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f7f7f7;
+  font-size: 12px;
+  padding: 8px;
+}
+.history-view {
+  display: flex;
+}
+@media only screen and (max-width: 719px) {
+  .history-view {
+    flex-direction: column;
+  }
+}
+.history-view > section {
+  max-width: 990px;
+  width: 100%;
+  height: 100%;
+}
+.history-view > section > article {
+  background: white;
+  box-shadow: 2px 2px 4px #dee1e7;
+}
+.history-view > section > article > .tab-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+.history-view > section > article > .tab-container > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  padding: 0px 8px;
+  border-bottom: 1px solid #CCC;
+}
+.history-view > section > article > .tab-container > a:hover {
+  font-weight: bold;
+  border-bottom: 3px solid #B19C76;
+}
+.history-view > section > article > .tab-container > .active {
+  font-weight: bold;
+  border-bottom: 3px solid #B19C76;
+}
+.history-view > section > hr {
+  border: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #CCC;
+  margin: 0px;
+}
+.history-view > aside {
+  max-width: 504px;
+  width: 100%;
+  margin-left: 16px;
+  background: white;
+  box-shadow: 2px 2px 4px #dee1e7;
+}
+@media only screen and (max-width: 719px) {
+  .history-view > aside {
+    display: none;
+  }
+}
+.history-view > aside > .input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.history-view > aside > .input-container > input {
+  width: 100%;
+  padding: 8px;
+  padding-left: 14px;
+  margin: 8px 0px;
+}
+.history-view > aside > .input-container > img {
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+}
+.history-view > aside > hr {
+  border: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #CCC;
+  margin: 0px;
+}
+.history-view > aside > header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f7f7f7;
+  font-size: 12px;
+  padding: 8px;
+}
+.balance-view {
+  display: flex;
+}
+@media only screen and (max-width: 719px) {
+  .balance-view {
+    flex-direction: column;
+  }
+}
+.balance-view > section {
+  max-width: 990px;
+  width: 100%;
+  height: 100%;
+}
+.balance-view > section > article {
+  background: white;
+  box-shadow: 2px 2px 4px #dee1e7;
+}
+.balance-view > section > article > .tab-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+.balance-view > section > article > .tab-container > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  padding: 0px 8px;
+  border-bottom: 1px solid #CCC;
+}
+.balance-view > section > article > .tab-container > a:hover {
+  font-weight: bold;
+  border-bottom: 3px solid #B19C76;
+}
+.balance-view > section > article > .tab-container > .active {
+  font-weight: bold;
+  border-bottom: 3px solid #B19C76;
+}
+.balance-view > section > hr {
+  border: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #CCC;
+  margin: 0px;
+}
+.balance-view > aside {
+  max-width: 504px;
+  width: 100%;
+  margin-left: 16px;
+  background: white;
+  box-shadow: 2px 2px 4px #dee1e7;
+}
+@media only screen and (max-width: 719px) {
+  .balance-view > aside {
+    display: none;
+  }
+}
+.balance-view > aside > .input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.balance-view > aside > .input-container > input {
+  width: 100%;
+  padding: 8px;
+  padding-left: 14px;
+  margin: 8px 0px;
+}
+.balance-view > aside > .input-container > img {
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+}
+.balance-view > aside > hr {
+  border: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #CCC;
+  margin: 0px;
+}
+.balance-view > aside > header {
   display: flex;
   justify-content: space-around;
   background-color: #f7f7f7;
