@@ -1723,6 +1723,68 @@ body {
   font-weight: bold;
   border-bottom: 3px solid #B19C76;
 }
+.balance-view > section > article > .my-container {
+  display: flex;
+  width: 100%;
+}
+.balance-view > section > article > .my-container > .order-table {
+  width: 100%;
+}
+.balance-view > section > article > .my-container > .order-table > table {
+  width: 100%;
+}
+.balance-view > section > article > .my-container > .order-table > table > thead {
+  width: 100%;
+  vertical-align: middle;
+  height: 30px;
+  background-color: #f9fafc;
+  color: #666;
+  font-size: 11px;
+  border-bottom: 1px solid #CCC;
+}
+.balance-view > section > article > .my-container > .order-table > table > thead > tr > th {
+  vertical-align: middle;
+}
+.balance-view > section > article > .my-container > .order-table > table > tbody {
+  display: table-row-group;
+  vertical-align: middle;
+}
+.balance-view > section > article > .my-container > .order-table > table > tbody > tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-bottom: 1px solid #eee;
+}
+.balance-view > section > article > .my-container > .order-table > table > tbody > tr > .amount-name {
+  display: flex;
+}
+.balance-view > section > article > .my-container > .order-table > table > tbody > tr > td {
+  vertical-align: middle;
+  height: 68px;
+  align-items: center;
+  padding: 15px 0px;
+  padding-left: 20px;
+  font-size: 13px;
+}
+.balance-view > section > article > .my-container > .order-table > table > tbody > tr > td > i {
+  display: inline-block;
+  padding-left: 2px;
+  font-size: 11px;
+  color: #999;
+  font-weight: 400;
+}
+.balance-view > section > article > .my-container > .order-table > table > tbody > tr > td > a {
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #999;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.balance-view > section > article > .my-container > .order-table > table > tbody > tr > .sell {
+  color: #0062df;
+}
+.balance-view > section > article > .my-container > .order-table > table > tbody > tr > .buy {
+  color: #e91840;
+}
 .balance-view > section > hr {
   border: 0;
   width: 100%;

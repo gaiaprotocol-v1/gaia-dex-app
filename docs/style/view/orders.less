@@ -41,6 +41,83 @@
                     border-bottom: 3px solid #B19C76;
                 }
             }
+
+            >.my-container {
+                display: flex;
+                width  : 100%;
+
+                >.order-table {
+                    width: 100%;
+
+                    >table {
+                        width: 100%;
+
+                        >thead {
+                            width           : 100%;
+                            vertical-align  : middle;
+                            height          : 30px;
+                            background-color: #f9fafc;
+                            color           : #666;
+                            font-size       : 11px;
+                            border-bottom   : 1px solid #CCC;
+
+                            >tr {
+                                >th {
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+
+                        >tbody {
+                            display       : table-row-group;
+                            vertical-align: middle;
+
+                            >tr {
+                                display       : table-row;
+                                vertical-align: inherit;
+                                border-bottom : 1px solid #eee;
+
+                                >.amount-name {
+                                    display: flex;
+                                }
+
+                                >td {
+                                    vertical-align: middle;
+                                    height        : 68px;
+                                    align-items   : center;
+                                    padding       : 15px 0px;
+                                    padding-left  : 20px;
+                                    font-size     : 13px;
+
+                                    >i {
+                                        display     : inline-block;
+                                        padding-left: 2px;
+                                        font-size   : 11px;
+                                        color       : #999;
+                                        font-weight : 400;
+                                    }
+
+                                    >a {
+                                        font-size       : 12px;
+                                        background-color: #fff;
+                                        border          : 1px solid #999;
+                                        padding         : 4px 8px;
+                                        border-radius   : 4px;
+                                    }
+                                }
+
+                                >.sell {
+                                    color: #0062df;
+                                }
+
+                                >.buy {
+                                    color: #e91840;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         >hr {
