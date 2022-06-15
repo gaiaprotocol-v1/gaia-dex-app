@@ -222,13 +222,21 @@ export default class Home implements View {
         const data = await axios.get("https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h");
     }
 
+
     private init() {
         this.getPrice();
         this.getOrderBook();
         this.getCandle();
-        const chart = createChart(this.chart.domElement, {
-            width: 920, height: 413
-        });
+        let chart;
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            chart = createChart(this.chart.domElement, {
+                width: 360, height: 413
+            });
+        } else {
+            chart = createChart(this.chart.domElement, {
+                width: 920, height: 413
+            });
+        }
         const lineSeries = chart.addCandlestickSeries();
         lineSeries.setData([
             { time: '2018-10-19', open: 180.34, high: 180.99, low: 178.57, close: 179.85 },

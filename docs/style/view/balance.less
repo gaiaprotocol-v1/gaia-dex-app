@@ -125,6 +125,10 @@
                     display        : flex;
                     justify-content: flex-end;
 
+                    @media @phone {
+                        display: none;
+                    }
+
                     >canvas {
                         max-width : 300px;
                         max-height: 150px;
@@ -133,6 +137,8 @@
             }
 
             >.amount-table {
+                overflow: auto;
+
                 >.amount-title {
                     font-weight  : bold;
                     padding      : 12px 20px;
