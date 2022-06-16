@@ -9,7 +9,7 @@ export default class Orders implements View {
     private container: DomNode;
 
     constructor() {
-        Layout.current.title = "미체결";
+        Layout.current.title = "공지사항";
         Layout.current.content.append(this.container = el(".notice-view",
             el("section",
                 el("article",
@@ -28,8 +28,8 @@ export default class Orders implements View {
                             ),
                         ),
                         el("tbody",
-                            el("tr",
-                                el("td", "[안내] 가이아프로토콜"),
+                            el("tr", { click: () => { ViewUtil.go("notice/1") } },
+                                el("td", "[공지] 가상자산 거래에 관한 위험 고지"),
                                 el("td", "2022.06.15"),
                                 el("td", "815761"),
                             ),

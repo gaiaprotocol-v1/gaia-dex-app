@@ -8,6 +8,7 @@ import History from "./view/investment/History";
 import Orders from "./view/investment/Orders";
 import Layout from "./view/Layout";
 import Notice from "./view/Notice";
+import NoticeDetail from "./view/NoticeDetail";
 
 (async () => {
     msg.language = BrowserInfo.language;
@@ -19,6 +20,7 @@ import Notice from "./view/Notice";
     SkyRouter.route("investment/history", History);
     SkyRouter.route("investment/orders", Orders);
     SkyRouter.route("notice", Notice);
+    SkyRouter.route("notice/{id}", NoticeDetail);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
